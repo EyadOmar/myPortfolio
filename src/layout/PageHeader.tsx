@@ -22,7 +22,10 @@ function PageHeader() {
 
   function toggleLang() {
     i18n.changeLanguage(currLang);
-    setCurrLang(currLang === 'en' ? 'ar' : 'en');
+    const isEn = currLang === 'en';
+    document.documentElement.dir = isEn ? 'ltr' : 'rtl';
+
+    setCurrLang(isEn ? 'ar' : 'en');
   }
 
   const variant = isNavOpen ? 'opened' : 'closed';

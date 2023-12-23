@@ -1,5 +1,9 @@
 {
   "menu": "قائمة",
   "theme": "الشكل",
-  "language": "اللغة"
+  "language": "اللغة",
+  "home": "الرئيسية",
+  "about": "عني",
+  "projects": "مشاريعي",
+  "contact": "التواصل"
 }
