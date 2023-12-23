@@ -60,7 +60,7 @@ function PageHeader() {
   };
 
   return (
-    <header className="sticky lg:h-44 h-36 mx-auto top-0 px-5 lg:px-10 flex justify-between items-center w-full">
+    <header className="sticky z-50 lg:h-36 h-24 mx-auto top-0 px-5 lg:px-10 flex justify-between items-center w-full">
       <a href="/">
         <img
           src={isDark ? '/eyad-logo-light.png' : '/eyad-logo.png'}
