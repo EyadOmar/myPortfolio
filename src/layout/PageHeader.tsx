@@ -2,8 +2,11 @@ import { Moon, Sun } from 'lucide-react';
 import { useState } from 'react';
 import i18n from '../i18n';
 import { useTranslation } from 'react-i18next';
+import { motion } from 'framer-motion';
+import { useNavMenuContext } from '../contexts/NavMenuContext';
 
 function PageHeader() {
+  const { isNavOpen, toggleNav } = useNavMenuContext();
   const { t } = useTranslation();
   const [currLang, setCurrLang] = useState(
     i18n.language === 'en' ? 'ar' : 'en'
@@ -22,8 +25,39 @@ function PageHeader() {
     setCurrLang(currLang === 'en' ? 'ar' : 'en');
   }
 
+  const variant = isNavOpen ? 'opened' : 'closed';
+  const top = {
+    closed: {
+      rotate: 0,
+      translateY: 0,
+    },
+    opened: {
+      rotate: 45,
+      translateY: 7,
+    },
+  };
+
+  const center = {
+    closed: {
+      opacity: 1,
+    },
+    opened: {
+      opacity: 0,
+    },
+  };
+  const bottom = {
+    closed: {
+      rotate: 0,
+      translateY: 0,
+    },
+    opened: {
+      rotate: -45,
+      translateY: -9,
+    },
+  };
+
   return (
-    <header className="sticky lg:h-44 h-36 max-w-7xl mx-auto top-0 px-5 lg:px-10 flex justify-between items-center">
+    <header className="sticky lg:h-44 h-36 mx-auto top-0 px-5 lg:px-10 flex justify-between items-center w-full">
       <a href="/">
         <img
           src={isDark ? '/eyad-logo-light.png' : '/eyad-logo.png'}
@@ -41,7 +75,7 @@ function PageHeader() {
         </button>
         <button
           onClick={darkHandler}
-          className="mx-5 lg:mx-7"
+          className="mx-5 lg:mx-7 outline-none"
           title={t('theme')}
         >
           {isDark ? (
@@ -51,12 +85,25 @@ function PageHeader() {
           )}
         </button>
         <button
+          onClick={toggleNav}
           title={t('menu')}
-          className=" flex gap-1 flex-col hover:gap-2 hover:rotate-90 delay-100 transition-all"
+          className=" flex gap-1 flex-col"
         >
-          <span className="block w-10 h-1 bg-black rounded-lg dark:bg-white transition-colors"></span>
-          <span className="block w-10 h-1 bg-black rounded-lg dark:bg-white transition-colors"></span>
-          <span className="block w-10 h-1 bg-black rounded-lg dark:bg-white transition-colors"></span>
+          <motion.span
+            animate={variant}
+            variants={top}
+            className="block w-10 h-1 bg-black rounded-lg dark:bg-white transition-colors"
+          ></motion.span>
+          <motion.span
+            animate={variant}
+            variants={center}
+            className="block w-10 h-1 bg-black rounded-lg dark:bg-white transition-colors"
+          ></motion.span>
+          <motion.span
+            animate={variant}
+            variants={bottom}
+            className="block w-10 h-1 bg-black rounded-lg dark:bg-white transition-colors"
+          ></motion.span>
         </button>
       </div>
     </header>
