@@ -1,4 +1,5 @@
 import NavMenuContextProvider from './contexts/NavMenuContext';
+import About from './layout/About';
 import Home from './layout/Home';
 import NavMenu from './layout/NavMenu';
 import PageHeader from './layout/PageHeader';
@@ -10,8 +11,7 @@ function App() {
         <PageHeader />
         <NavMenu />
         <Home />
-        <Home />
-        <Home />
+        <About />
       </NavMenuContextProvider>
     </div>
   );

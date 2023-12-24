@@ -9,3 +9,7 @@
 *::-webkit-scrollbar-thumb {
   @apply bg-black rounded-full dark:bg-bgk;
 }
+
+section {
+  @apply font-bold px-10  w-screen flex flex-col h-screen justify-center;
+}
