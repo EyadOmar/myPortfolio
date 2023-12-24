@@ -78,7 +78,7 @@ function PageHeader() {
         </button>
         <button
           onClick={darkHandler}
-          className="mx-5 lg:mx-7 outline-none"
+          className="mx-5 lg:mx-7 outline-none border-none"
           title={t('theme')}
         >
           {isDark ? (
