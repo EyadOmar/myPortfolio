@@ -22,6 +22,7 @@ function NavMenuContextProvider({ children }: NavMenuContextProviderProps) {
 
   function toggleNav() {
     setIsNavOpen((isNavOpen) => !isNavOpen);
+    document.body.classList.toggle('overflow-hidden');
   }
 
   return (

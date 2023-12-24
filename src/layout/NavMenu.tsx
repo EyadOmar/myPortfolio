@@ -14,7 +14,7 @@ function NavMenu() {
           animate={{ x: 0, opacity: 1, scale: 1 }}
           exit={{ x: -2000, opacity: 0, scale: 0 }}
           transition={{ duration: 0.5, ease: 'backInOut' }}
-          className=" absolute z-10 inset-0 pt-36 lg:pt-72 px-10 tracking-[-3px] flex flex-col  gap-5 text-5xl lg:text-7xl uppercase italic transition-colors"
+          className="fixed z-10 inset-0 w-screen h-screen bg-white dark:bg-[#222] px-10 tracking-[-3px] flex flex-col justify-center  gap-5 text-5xl lg:text-7xl uppercase italic transition-colors"
         >
           <motion.a whileHover={linksHover} href="/">
             {t('home')}

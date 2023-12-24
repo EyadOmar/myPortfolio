@@ -1,29 +1,12 @@
 import { motion } from 'framer-motion';
-import { useNavMenuContext } from '../contexts/NavMenuContext';
 import { GalleryVerticalEnd, LucideIcon, User } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
 function Home() {
-  const { isNavOpen } = useNavMenuContext();
   const { t } = useTranslation();
-  const sectionVariant = {
-    invisible: {
-      opacity: 0,
-      scale: 0,
-    },
-    visible: {
-      opacity: 1,
-      scale: 1,
-    },
-  };
 
   return (
-    <motion.section
-      variants={sectionVariant}
-      animate={isNavOpen ? 'invisible' : 'visible'}
-      className=" font-bold px-10 pb-20 pt-5 lg:pt-32"
-      layout
-    >
+    <section className="font-bold px-10  w-screen flex flex-col h-screen justify-center py-10">
       <article>
         <h1 className="text-5xl lg:text-7xl">{t('job')}</h1>
         <p className=" mt-10  text-xl lg:text-3xl">{t('slogan')}</p>
@@ -32,7 +15,7 @@ function Home() {
         <HomeButton Icon={GalleryVerticalEnd} title="projects" />
         <HomeButton Icon={User} title="contact" />
       </div>
-    </motion.section>
+    </section>
   );
 }
 
