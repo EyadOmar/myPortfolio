@@ -1,27 +1,34 @@
+import { Download } from 'lucide-react';
+import Button from '../components/Button';
+import { useTranslation } from 'react-i18next';
+
 function About() {
+  const { t } = useTranslation();
   return (
-    <section id="about">
-      <article>
-        <h2 className="font-bold text-5xl lg:text-7xl pb-10">
-          Eyad Omar AbdElAziz
-        </h2>
-        <p className=" text-pretty">
-          I was born in Egypt in the year 2000.My father got me my first
-          computer when I was nine years old, and I've been obsessed with
-          computers ever since. at 2019, I enrolled at
-          <a href="https://www.mti.edu.eg/faculty/2/computing" target="_blank">
-            MTI's computer science faculty
-          </a>
-          .I graduated in 2023 with a 3.6 GPA. Of course, I am grateful to my
-          college for teaching the fundamentals of computer science, but what
-          has truly defined me is my self-study in front end development since
-          2021. I've built dozens of websites using various tools and am ready
-          to make more.
-        </p>
-      </article>
-      <figure>
-        <img src="" alt="" />
+    <section
+      id="about"
+      className=" grid gap-10 items-center justify-center place-items-center grid-cols-1  lg:grid-cols-2"
+    >
+      <figure className="lg:order-last">
+        <img
+          src="/myImage.JPG"
+          alt="Eyad Omar image"
+          className=" max-h-[600px] md:max-h-[800px] rounded-lg"
+        />
       </figure>
+      <article>
+        <h2 className="font-bold pb-5 lg:pb-10 text-5xl lg:text-7xl">
+          {t('name')}
+        </h2>
+        <p className="text-pretty text-sm lg:text-lg">{t('about-me')}</p>
+        <a
+          href="/cv.pdf"
+          target="_blank"
+          className="text-xl block w-fit mt-10 mx-auto lg:mx-0"
+        >
+          <Button Icon={Download} title="resume" />
+        </a>
+      </article>
     </section>
   );
 }

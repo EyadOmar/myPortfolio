@@ -11,5 +11,5 @@
 }
 
 section {
-  @apply font-bold px-10  w-screen flex flex-col h-screen justify-center;
+  @apply font-bold p-10  w-screen flex flex-col min-h-screen justify-center;
 }

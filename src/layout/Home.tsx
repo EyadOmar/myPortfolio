@@ -1,6 +1,6 @@
-import { motion } from 'framer-motion';
-import { GalleryVerticalEnd, LucideIcon, User } from 'lucide-react';
+import { GalleryVerticalEnd, User } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import Button from '../components/Button';
 
 function Home() {
   const { t } = useTranslation();
@@ -15,25 +15,10 @@ function Home() {
         <p className=" mt-10  text-xl lg:text-3xl">{t('slogan')}</p>
       </article>
       <div className="flex gap-4 mt-10 text-xl lg:text-2xl">
-        <HomeButton Icon={GalleryVerticalEnd} title="projects" />
-        <HomeButton Icon={User} title="contact" />
+        <Button Icon={GalleryVerticalEnd} title="projects" />
+        <Button Icon={User} title="contact" />
       </div>
     </section>
-  );
-}
-
-type HomeButtonProps = {
-  Icon: LucideIcon;
-  title: string;
-};
-
-function HomeButton({ Icon, title }: HomeButtonProps) {
-  const { t } = useTranslation();
-  return (
-    <motion.button className=" flex gap-2 items-center border-2 border-black dark:border-white rounded-lg p-3 outline-none hover:text-bgk hover:bg-black dark:hover:text-black dark:hover:bg-bgk transition-colors duration-300">
-      <Icon />
-      {t(title)}
-    </motion.button>
   );
 }
 
