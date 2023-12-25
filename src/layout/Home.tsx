@@ -8,7 +8,7 @@ function Home() {
   return (
     <section
       id="home"
-      className="font-bold px-10  w-screen flex flex-col h-screen justify-center"
+      className="font-bold px-10  w-screen flex flex-col h-screen justify-center lg:items-center lg:text-center"
     >
       <article>
         <h1 className="text-5xl lg:text-7xl">{t('job')}</h1>
