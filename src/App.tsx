@@ -3,6 +3,7 @@ import About from './layout/About';
 import Home from './layout/Home';
 import NavMenu from './layout/NavMenu';
 import PageHeader from './layout/PageHeader';
+import Projects from './layout/Projects';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <NavMenu />
         <Home />
         <About />
+        <Projects />
       </NavMenuContextProvider>
     </div>
   );
