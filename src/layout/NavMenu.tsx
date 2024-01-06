@@ -22,10 +22,14 @@ function NavMenu() {
           <motion.a onClick={toggleNav} whileHover={linksHover} href="#about">
             {t('about')}
           </motion.a>
-          <motion.a onClick={toggleNav} whileHover={linksHover} href="#home">
+          <motion.a
+            onClick={toggleNav}
+            whileHover={linksHover}
+            href="#projects"
+          >
             {t('projects')}
           </motion.a>
-          <motion.a onClick={toggleNav} whileHover={linksHover} href="#home">
+          <motion.a onClick={toggleNav} whileHover={linksHover} href="#contact">
             {t('contact')}
           </motion.a>
         </motion.nav>

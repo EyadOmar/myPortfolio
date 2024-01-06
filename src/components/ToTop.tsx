@@ -28,9 +28,9 @@ function ToTop() {
     <AnimatePresence>
       {isVisible && (
         <motion.button
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
+          initial={{ opacity: 0, bottom: 0 }}
+          animate={{ opacity: 1, bottom: 32 }}
+          exit={{ opacity: 0, bottom: 0 }}
           onClick={toTopHandler}
           className="fixed right-6 bottom-8 p-2 z-30 rounded-full bg-black text-white dark:bg-white dark:text-black"
           title={t('to-Top')}

@@ -6,7 +6,7 @@ function About() {
   const { t } = useTranslation();
   return (
     <section id="about">
-      <div className="my-container grid gap-10 justify-center place-items-center grid-cols-1 lg:grid-cols-[2fr_1fr]">
+      <div className="my-container min-h-screen grid gap-10 justify-center place-items-center grid-cols-1 lg:grid-cols-[2fr_1fr]">
         <figure className="lg:order-last ">
           <img
             src="/myImage.JPG"

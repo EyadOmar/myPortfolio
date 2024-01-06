@@ -60,7 +60,7 @@ function PageHeader() {
   };
 
   return (
-    <header className="fixed z-50 lg:h-36 h-24 mx-auto top-0 px-5 lg:px-10 flex justify-between items-center w-full">
+    <header className="lg:h-36 h-24 mx-auto top-0 px-5 lg:px-10 flex justify-between items-center w-full">
       <a href="/">
         <img
           src={isDark ? '/eyad-logo-light.png' : '/eyad-logo.png'}
@@ -90,7 +90,7 @@ function PageHeader() {
         <button
           onClick={toggleNav}
           title={t('menu')}
-          className=" flex gap-1 flex-col"
+          className=" flex gap-1 flex-col z-50"
         >
           <motion.span
             animate={variant}

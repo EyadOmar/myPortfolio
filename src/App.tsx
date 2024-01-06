@@ -8,7 +8,7 @@ import Projects from './layout/Projects';
 
 function App() {
   return (
-    <div className="relative overflow-hidden font-body min-h-screen bg-bgk dark:bg-black dark:text-white transition-colors pb-6 md:pb-9  lg:pb-12">
+    <div className="relative overflow-hidden font-body min-h-screen bg-bgk dark:bg-black dark:text-white transition-colors">
       <NavMenuContextProvider>
         <PageHeader />
         <NavMenu />

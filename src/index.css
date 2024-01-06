@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 *::-webkit-scrollbar {
-  @apply bg-bgk dark:bg-black w-2;
+  @apply  bg-bgk dark:bg-black w-2;
 }
 
 *::-webkit-scrollbar-thumb {

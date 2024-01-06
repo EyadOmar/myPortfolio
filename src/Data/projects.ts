@@ -8,6 +8,7 @@ import react from '../assets/made-with-icons/react.svg';
 
 interface projectType {
   name: string;
+  nameAr: string;
   img: string;
   madeWith: Array<skill>;
   link: string;
@@ -22,6 +23,7 @@ interface skill {
 const projects: Array<projectType> = [
   {
     name: 'DashBoard',
+    nameAr: 'لوحة تحكم',
     img: dashboard,
     madeWith: [
       { name: 'html', image: html },
@@ -33,6 +35,7 @@ const projects: Array<projectType> = [
   },
   {
     name: 'Movies App',
+    nameAr: 'برنامج تصفح افلام و مسلسلات',
     img: emovies,
     madeWith: [
       { name: 'react', image: react },
@@ -44,6 +47,7 @@ const projects: Array<projectType> = [
   },
   {
     name: 'Landing Page',
+    nameAr: 'صفحة هبوط',
     img: elzero,
     madeWith: [
       { name: 'html', image: html },
