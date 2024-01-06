@@ -9,24 +9,49 @@ import react from '../assets/made-with-icons/react.svg';
 interface projectType {
   name: string;
   img: string;
-  madeWith: Array<string>;
+  madeWith: Array<skill>;
+  link: string;
+  id: number;
+}
+
+interface skill {
+  name: string;
+  image: string;
 }
 
 const projects: Array<projectType> = [
   {
     name: 'DashBoard',
     img: dashboard,
-    madeWith: [html, css, js],
-  },
-  {
-    name: 'Landing Page',
-    img: elzero,
-    madeWith: [html, css, js],
+    madeWith: [
+      { name: 'html', image: html },
+      { name: 'css', image: css },
+      { name: 'JavaScript', image: js },
+    ],
+    link: 'https://eyadomar.github.io/Dashboard-template/index.html',
+    id: 1,
   },
   {
     name: 'Movies App',
     img: emovies,
-    madeWith: [react, css, js],
+    madeWith: [
+      { name: 'react', image: react },
+      { name: 'css', image: css },
+      { name: 'JavaScript', image: js },
+    ],
+    link: 'https://emoviez.netlify.app/',
+    id: 2,
+  },
+  {
+    name: 'Landing Page',
+    img: elzero,
+    madeWith: [
+      { name: 'html', image: html },
+      { name: 'css', image: css },
+      { name: 'JavaScript', image: js },
+    ],
+    link: '/',
+    id: 3,
   },
 ];
 

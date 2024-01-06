@@ -10,6 +10,10 @@
   @apply bg-black rounded-full dark:bg-bgk;
 }
 
-section {
-  @apply font-bold p-10  w-screen flex flex-col min-h-screen justify-center;
+.my-container {
+  @apply container mx-auto px-4;
+}
+
+.swiper-slide {
+  max-width: fit-content;
 }
